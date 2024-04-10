@@ -9,7 +9,6 @@ class JsonPlaceholderHelper
     // Rapid API
     public static function getApiEndpoint()
     {
-        // return 'https://api-football-v1.p.rapidapi.com/v3/timezone';
         return 'https://api-football-v1.p.rapidapi.com/v3';
     }
 

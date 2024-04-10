@@ -51,7 +51,3 @@ class FootballService implements FootballServiceInterface
         }
     }
 }
-
-// Aplicando Polimorfismo
-// Agora, em vez de injetar diretamente FootballService no controlador, vamos injetar a interface FootballServiceInterface. 
-// Isso permite que possamos alterar a implementação do serviço facilmente sem precisar mudar o código do controlador.

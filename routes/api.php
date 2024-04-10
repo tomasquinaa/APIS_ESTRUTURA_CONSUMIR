@@ -24,14 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/posts', [PostController::class, 'index'])->name('posts');
-Route::get('/comments', [CommentController::class, 'handle'])->name('comments');
-Route::get('/albums', [AlbumController::class, 'handle'])->name('albums');
-
-
 Route::get('/timezone', [FootballController::class, 'getTimezone'])->name('fuso-horario');
 Route::get('/countries', [CountriesController::class, 'getCountries'])->name('countries');
 Route::get('/players', [PlayerController::class, 'getPlayers'])->name('players');
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/comments', [CommentController::class, 'handle'])->name('comments');
+Route::get('/albums', [AlbumController::class, 'handle'])->name('albums');
 
 Route::get('/links', function () {
 
