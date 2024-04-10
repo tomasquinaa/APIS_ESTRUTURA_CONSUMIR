@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CountriesController;
 use App\Http\Controllers\FootballController;
 use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
@@ -28,3 +29,4 @@ Route::get('/albums', [AlbumController::class, 'handle']);
 
 
 Route::get('/timezone', [FootballController::class, 'getTimezone']);
+Route::get('/countries', [CountriesController::class, 'getCountries']);

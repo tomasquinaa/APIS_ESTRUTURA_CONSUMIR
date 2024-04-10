@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Services\FootballService;
+use App\Services\FootballServiceInterface;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 
@@ -11,7 +12,7 @@ class FootballController extends Controller
 {
     protected $footballService;
 
-    public function __construct(FootballService $footballService)
+    public function __construct(FootballServiceInterface $footballService)
     {
         $this->footballService = $footballService;
     }
@@ -27,6 +28,12 @@ class FootballController extends Controller
     }
 }
 
+
+// SOLID e Encapsulamento
+// A classe JsonPlaceholderHelper já está encapsulada, pois as funções estão encapsuladas dentro da classe. Além disso, 
+// ao usar a interface FootballServiceInterface, estamos seguindo o princípio da inversão de dependência, que é uma parte do princípio SOLID.
+
+// Com essas mudanças, o código é mais flexível e desacoplado, seguindo os princípios SOLID e os conceitos de encapsulamento e polimorfismo.
 
 
 

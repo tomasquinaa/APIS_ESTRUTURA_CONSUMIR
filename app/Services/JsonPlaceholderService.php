@@ -5,7 +5,7 @@ namespace App\Services;
 use App\Helpers\JsonPlaceholderHelper;
 use Illuminate\Support\Facades\Http;
 
-class JsonPlaceholderService
+class JsonPlaceholderService implements JsonPlaceholderServiceInterface
 {
     public function getPosts()
     {
