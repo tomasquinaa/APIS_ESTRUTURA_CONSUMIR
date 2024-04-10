@@ -28,7 +28,21 @@ class FootballService implements FootballServiceInterface
 
         try {
             $response = $client->request('GET', JsonPlaceholderHelper::getApiEndpoint() . '/teams/countries', [
-                'headers' => JsonPlaceholderHelper::getApiHeadersCountries(),
+                'headers' => JsonPlaceholderHelper::getApiHeaders(),
+            ]);
+
+            return json_decode($response->getBody(), true);
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
+    }
+
+    public function getPlayers()
+    {
+        $client = new Client();
+        try {
+            $response = $client->request('GET', JsonPlaceholderHelper::getApiEndpoint() . '/players?team=33&season=2020', [
+                'headers' => JsonPlaceholderHelper::getApiHeaders(),
             ]);
 
             return json_decode($response->getBody(), true);

@@ -20,12 +20,4 @@ class JsonPlaceholderHelper
             'X-RapidAPI-Key' => '9d33715652msha31f124cb292d70p120a20jsn13f11eaa9b04',
         ];
     }
-
-    public static function getApiHeadersCountries()
-    {
-        return [
-            'X-RapidAPI-Host' => 'api-football-v1.p.rapidapi.com',
-            'X-RapidAPI-Key' => '9d33715652msha31f124cb292d70p120a20jsn13f11eaa9b04',
-        ];
-    }
 }
